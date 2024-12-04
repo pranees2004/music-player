@@ -19,3 +19,47 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* globals.css or your specific CSS file */
+
+@keyframes sparkle {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.7);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(50%) scale(0.7);
+  }
+}
+
+.sparkles {
+  position: relative;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+.sparkles::before,
+.sparkles::after {
+  content: "★";
+  position: absolute;
+  animation: sparkle 1s infinite;
+}
+
+.sparkles::before {
+  left: -30px;
+  top: -30px;
+  font-size: 1.2rem;
+  animation-duration: 2s;
+}
+
+.sparkles::after {
+  right: -30px;
+  bottom: -30px;
+  font-size: 1.2rem;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+}
