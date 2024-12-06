@@ -63,3 +63,15 @@ body {
   animation-duration: 1.5s;
   animation-delay: 0.5s;
 }
+@keyframes slideDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100px); /* Adjust as needed */
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.5s ease-in-out forwards; /* Match the timeout */
+}

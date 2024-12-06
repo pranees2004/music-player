@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import { RiArrowDownDoubleFill } from "react-icons/ri";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import Link from "next/link";
+import Navbar from "../navbar/page";
+
 
 export default function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -37,10 +40,11 @@ export default function MusicPlayer() {
 >
 
         {/* Button positioned in the top-left corner */}
+        <Navbar />
         <div className="p-8 ">
-          <button className="absolute top-2 left-2 sm:top-4 sm:left-4 p-1 sm:p-2 bg-purple-600 text-white rounded-full z-10">
-            <RiArrowDownDoubleFill className="h-5 w-5 sm:h-6 sm:w-6" />
-          </button>
+      
+         
+          
           <div className="absolute bottom-[28rem] left-0 w-full h-[1px] bg-white"></div>
         </div>
 

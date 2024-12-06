@@ -23,8 +23,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Force mobile view and reduce height */}
-        <div className="w-full max-w-xs mx-auto max-h-screen overflow-hidden">
+        {/* Adaptive layout */}
+        <div
+          className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-3xl mx-auto min-h-screen"
+        >
           {children}
         </div>
       </body>
